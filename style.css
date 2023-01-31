@@ -1,0 +1,40 @@
+body {
+  height: 100vh;
+  min-height: 500px;
+  background: #008080;
+  background: -webkit-linear-gradient(bottom right, #008080, #fa8073);
+  background: -moz-linear-gradient(bottom right, #008080, #fa8073);
+  background: linear-gradient(to top left, #008080, #fa8073);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 2rem;
+  color: black;
+  text-align: center;
+}
+
+.myTable {
+  border-collapse: collapse;
+  margin: 25px auto;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+th,
+td {
+  border: 1px solid #f8f8f8;
+  padding: 10px;
+  text-align: center;
+}
+
+tr:first-of-type {
+  background-color: rgb(255, 255, 255);
+}
+
+tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.3);
+}
