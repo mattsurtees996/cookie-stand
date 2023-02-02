@@ -4,23 +4,67 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Cookie Stand Sales</title>
+    <link rel="stylesheet" href="sales.css" />
+    <title>Salmon Cookie Stand Sales</title>
   </head>
   <body>
-    <h1>Pat's Salmon Cookies</h1>
+    <header class="header">
+      <div class="header-container container">
+        <h1 class="Logo">Pats Salmon Cookies Sales</h1>
+        <nav class="nav">
+          <ul class="header-nav-list">
+            <li class="head-nav-list-item"><a href="/index.html">Home</a></li>
+            <li class="head-nav-list-item"><a href="/sales.html">Sales</a></li>
+            <li class="head-nav-list-item">About Us</li>
+            <li class="head-nav-list-item">Contact Us</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <table id="myTable" class="myTable"></table>
+    <form id="new-store-form">
+      <fieldset>
+        <legend>Enter New Cookie Store:</legend>
+        <label for="name-input">Store Name:</label>
+        <input
+          name="name"
+          id="name-input"
+          type="text"
+          placeholder="Input Name"
+          required
+        />
 
-    <!-- <h2>Seattle</h2>
-    <ul id="seattle"></ul>
-    <h2>Tokyo</h2>
-    <ul id="tokyo"></ul>
-    <h2>Dubai</h2>
-    <ul id="dubai"></ul>
-    <h2>Paris</h2>
-    <ul id="paris"></ul>
-    <h2>Lima</h2>
-    <ul id="lima"></ul> -->
+        <label for="min-cust-input">Min Customers:</label>
+        <input
+          name="minCust"
+          id="min-cust-input"
+          type="text"
+          placeholder="Input Min Customers"
+          required
+        />
+
+        <label for="max-cust-input">Max Customers:</label>
+        <input
+          name="maxCust"
+          id="max-cust-input"
+          type="text"
+          placeholder="Input Max Customers"
+          required
+        />
+
+        <label for="avg-cookies-input">Average Cookies sold</label>
+        <input
+          name="avgCookies"
+          id="avg-cookies-input"
+          type="text"
+          placeholder="Input Average Cookies"
+          required
+        />
+
+        <button id="submit-button" type="submit">SUBMIT</button>
+      </fieldset>
+    </form>
+
     <script src="app.js"></script>
   </body>
 </html>
