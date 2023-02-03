@@ -19,6 +19,14 @@ const hours = [
   "7pm",
 ];
 
+const table = document.getElementById("myTable");
+
+const state = {
+
+}
+
+for(){}
+
 function CookieStore(name, minCust, maxCust, avgSale) {
   this.name = name;
   this.minCust = minCust;
@@ -26,6 +34,7 @@ function CookieStore(name, minCust, maxCust, avgSale) {
   this.avgSale = avgSale;
   this.custPerHour = [];
   this.cookiesPerHour = [];
+  this.totalDailyCookies = 0;
 }
 
 CookieStore.prototype.calcCustPerHour = function () {
@@ -47,7 +56,6 @@ CookieStore.prototype.render = function () {
   this.calcCookiesPerHour();
 
   // table
-  const table = document.getElementById("myTable");
 
   // table row
   const tr = document.createElement("tr");
@@ -64,28 +72,51 @@ CookieStore.prototype.render = function () {
     td.textContent = this.cookiesPerHour[i];
     tr.appendChild(td);
   }
+  const tableHeader = document.createElement("th");
+  tableHeader.textContent = this.totalDailyCookies;
+  tr.appendChild(tableHeader);
+  table.appendChild(tableRow);
 };
 
 function makeHeaderRow() {
   // table
-  const table = document.getElementById("myTable");
 
   // table row
   const tr = document.createElement("tr");
-  table.appendChild(tr);
-
-  // starting cell
-  let th = document.createElement("th");
-  tr.appendChild(th);
-  // get data into the row
+  let tableHeader = document.createElement("th");
+  tableHeader.textContent = "Locations";
+  tableRow.appendChild(tableHeader);
   for (let i = 0; i < hours.length; i++) {
-    th = document.createElement("th");
-    th.textContent = hours[i];
-    tr.appendChild(th);
+    tableHeader = document.createElement("th");
+    tableHeader.textContent = hours[i];
+    tableRow.appendChild(tableHeader);
   }
+
+  tableHeader = document.createElement("th");
+  tableHeader.textContent = "Totals";
+  tableRow.appendChild(tableHeader);
+  table.appendChild(tableRow);
 }
 
-makeHeaderRow();
+function makeFooterRow(){
+
+const tableRow = document.createElement("tr");
+
+let tableHeader = document.createElement("th");
+
+tableHeader.textContent = "Hourly Totals";
+tableRow.appendChild(tableHeader)
+
+let totalOfTotals = 0;
+
+for(let i= 0; i < hours.length; i++) {
+  let hourlyTotal = 0;{
+    for(let j = 0; j < StaticRange.allCookieStands.length){}
+  }
+
+}
+
+}
 
 const seattle = new CookieStore("Seattle", 23, 65, 6.3);
 const tokyo = new CookieStore("Tokyo", 3, 24, 1.2);
